@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FormGenerator
+            :data="objectToConvert"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import FormGenerator from './components/FormGenerator';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+
+    components: {
+      FormGenerator,
+    },
+
+    data () {
+      return {
+        objectToConvert: window.prebidConfig,
+      }
+    }
   }
-}
 </script>
 
 <style>

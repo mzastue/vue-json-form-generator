@@ -4,7 +4,7 @@
           type="checkbox"
           :value="value"
           :checked="value"
-  ></input>
+  >
 </template>
 
 <script>
